@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="40dp"
+	android:paddingStart="2dp"
+	android:paddingEnd="2dp"
+	android:layout_height="match_parent"
+	tools:background="@color/divider">
+
+	<LinearLayout
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/wrapperProgress"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/name"
+		android:layout_marginTop="12dp"
+		android:layout_marginBottom="12dp"
+		android:paddingBottom="16dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/additional"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:textColor="@color/text"
+			android:textSize="10dp"
+			android:visibility="invisible"
+			tools:ignore="SpUsage"
+			tools:text="3000.00" />
+
+		<TextView
+			android:id="@+id/percent"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="-4dp"
+			android:layout_marginBottom="4dp"
+			android:textColor="@color/text"
+			android:textSize="10dp"
+			android:visibility="invisible"
+			tools:ignore="SpUsage"
+			tools:text="90%" />
+
+		<FrameLayout
+			android:id="@+id/progressLayout"
+			android:paddingTop="26dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:minHeight="10dp">
+
+			<View
+				android:id="@+id/progress"
+				android:layout_width="30dp"
+				android:layout_height="200dp"
+				android:layout_gravity="bottom"
+				android:background="@color/bar"
+				tools:ignore="UnusedAttribute" />
+
+		</FrameLayout>
+	</LinearLayout>
+
+	<FrameLayout
+		android:id="@+id/label"
+		android:layout_width="32dp"
+		android:layout_height="28dp"
+		android:layout_above="@+id/name"
+		android:layout_centerHorizontal="true"
+		android:background="@drawable/chart_label">
+
+		<ImageView
+			android:id="@+id/imgLabel"
+			android:layout_width="32dp"
+			android:layout_height="28dp"
+			android:gravity="center"
+			android:padding="6dp"
+			android:visibility="gone"
+			tools:ignore="ContentDescription" />
+
+		<TextView
+			android:id="@+id/txtLabel"
+			android:layout_width="32dp"
+			android:layout_height="28dp"
+			android:gravity="center"
+			android:lines="1"
+			android:padding="4dp"
+			android:textColor="@color/text"
+			android:textSize="10dp"
+			android:visibility="gone"
+			tools:ignore="SpUsage"
+			tools:text="999" />
+
+	</FrameLayout>
+
+	<TextView
+		android:id="@+id/name"
+		android:visibility="gone"
+		android:layout_width="wrap_content"
+		android:layout_height="44dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:gravity="center_horizontal"
+		android:maxLines="2"
+		android:paddingTop="4dp"
+		android:paddingBottom="4dp"
+		android:textColor="@color/text"
+		android:textSize="10dp"
+		tools:ignore="SpUsage"
+		tools:text="First\nName" />
+
+</RelativeLayout>
